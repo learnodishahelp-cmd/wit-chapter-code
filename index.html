@@ -1,0 +1,158 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Materials</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* The Grid Container */
+        .grid-container {
+            display: grid;
+            /* This creates the vertical-to-horizontal responsiveness */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Individual Grid Items */
+        .study-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-decoration: none; /* Removes underline from link */
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+            border-color: var(--primary-color);
+        }
+
+        .study-card h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        .study-card p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+            color: #666;
+            flex-grow: 1; /* Pushes content to fill space */
+        }
+
+        .click-hint {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .grid-container {
+                grid-template-columns: 1fr; /* Strict vertical stack on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Wit That Won Hearts</h1>
+        <p></p>
+    </header>
+
+    <div class="grid-container">
+        
+        <a href="https://example.com/quantum-physics" target="_blank" class="study-card">
+            <h2>Quiz </h2>
+            <p></p>
+            <div class="click-hint"> Open</div>
+        </a>
+
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Vocabulary</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Grammer</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Short Questions</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Long Questions</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Chapter 2</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Chapter 2</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        <a href="https://example.com/ancient-history" target="_blank" class="study-card">
+            <h2>Chapter 2</h2>
+            <p></p>
+            <div class="click-hint">Open →</div>
+        </a>
+        
+
+        <a href="#" target="_blank" class="study-card">
+            <h2>Organic Chemistry</h2>
+            <p>Everything you need to know about carbon-based molecules and the nightmare that is nomenclature.</p>
+            <div class="click-hint">Open Resource →</div>
+        </a>
+
+    </div>
+
+</body>
+</html>
